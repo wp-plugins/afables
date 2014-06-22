@@ -1,0 +1,106 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: OhayoWeb <info@ohayoweb.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: ca\n"
+
+#. Text in widget
+#: inc/fables-widget.php
+msgid "Afables Widget"
+msgstr ""
+
+msgid "Display the Afables Widget."
+msgstr "Mostra el Widget de afables."
+
+msgid "New title"
+msgstr "Nou títol"
+
+msgid "Title:"
+msgstr "Títol:"
+
+msgid "City:"
+msgstr "Ciutat:"
+
+msgid "Customer Type:"
+msgstr "Tipus de client:"
+
+msgid "All"
+msgstr "Tots"
+
+msgid "None"
+msgstr "Cap"
+
+msgid "Channel:"
+msgstr "Canal:"
+
+msgid "Settings:"
+msgstr "Opcions:"
+
+msgid "Hide thumbnails"
+msgstr "Amaga les imatges en miniatura"
+
+msgid "Language:"
+msgstr "Idioma:"
+
+msgid "Caregivers"
+msgstr "Cuidadors"
+
+msgid "Home help companies"
+msgstr "Empreses d'Ajuda a domicili"
+
+msgid ""
+"<strong>%d</strong> caregivers rated and recommended by other families in "
+"<strong>%s</strong>"
+msgstr ""
+"<strong>%d</strong> cuidadors en <strong>%s</strong> valorats i recomanats "
+"per altres famílies."
+
+msgid "Previous"
+msgstr "Anterior"
+
+msgid "Next"
+msgstr "Següent"
+
+msgid "Need a sitter home help?"
+msgstr "Necessites un cuidador/a d'ajuda a domicili?"
+
+msgid "home help"
+msgstr "ajuda a domicili"
+
+msgid "<strong>Social Recommender</strong> %s powered by Afables."
+msgstr "<strong>Recomanador Social</strong> de %s proporcionat per Afables."
+
+msgid "View details"
+msgstr "Veure detalls"
+
+msgid ""
+"Between <span class=\"price\">%d</span> € and <span class=\"price\">%d</"
+"span> €/hour"
+msgstr ""
+"Entre <span class=\"price\">%d</span> € i <span class=\"price\">%d</span> €/"
+"hora"
+
+msgid "No results!"
+msgstr "Sense resultats!"
+
+msgid ""
+"We currently do not have carers published as matching your needs in this "
+"area."
+msgstr ""
+"En aquest moment no tenim cuidadors/es publicats que coincideixin amb les "
+"teves necessitats en aquesta àrea."
+
+msgid ""
+"New caregivers as they join us every day, call us or email us and we will "
+"help you in your quest for free (answer in less than 24 hours)."
+msgstr ""
+"Nous cuidadors/es s'uneixen a nosaltres cada dia, truca'ns o envia'ns un "
+"email i t'ajudem gratuïtament en la teva recerca (resposta en menys de 24 "
+"hores)."

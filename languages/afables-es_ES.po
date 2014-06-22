@@ -1,0 +1,106 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: OhayoWeb <info@ohayoweb.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: es_ES\n"
+
+#. Text in widget
+#: inc/fables-widget.php
+msgid "Afables Widget"
+msgstr "Widget Afables"
+
+msgid "Display the Afables Widget."
+msgstr "Muestra el Widget de Afables."
+
+msgid "New title"
+msgstr "Nuevo título"
+
+msgid "Title:"
+msgstr "Título:"
+
+msgid "City:"
+msgstr "Ciudad:"
+
+msgid "Customer Type:"
+msgstr "Tipo de cliente:"
+
+msgid "All"
+msgstr "Todos"
+
+msgid "None"
+msgstr "Ninguno"
+
+msgid "Channel:"
+msgstr "Canal:"
+
+msgid "Settings:"
+msgstr "Opciones:"
+
+msgid "Hide thumbnails"
+msgstr "Ocultar imágenes en miniaturas"
+
+msgid "Language:"
+msgstr "Idioma:"
+
+msgid "Caregivers"
+msgstr "Cuidadores"
+
+msgid "Home help companies"
+msgstr "Empresas de Ayuda a domicilio"
+
+msgid ""
+"<strong>%d</strong> caregivers rated and recommended by other families in "
+"<strong>%s</strong>"
+msgstr ""
+"<strong>%d</strong> cuidadores en <strong>%s</strong> valorados y "
+"recomendados por otras familias."
+
+msgid "Previous"
+msgstr "Anterior"
+
+msgid "Next"
+msgstr "Siguiente"
+
+msgid "Need a sitter home help?"
+msgstr "¿Necesitas un cuidador/a de ayuda a domicilio?"
+
+msgid "home help"
+msgstr "ayuda a domicilio"
+
+msgid "<strong>Social Recommender</strong> %s powered by Afables."
+msgstr "<strong>Recomendador Social</strong> de %s proporcionado por Afables."
+
+msgid "View details"
+msgstr "Ver detalles"
+
+msgid ""
+"Between <span class=\"price\">%d</span> € and <span class=\"price\">%d</"
+"span> €/hour"
+msgstr ""
+"Entre <span class=\"price\">%d</span> € y <span class=\"price\">%d</span> €/"
+"hora"
+
+msgid "No results!"
+msgstr "Sin resultados!"
+
+msgid ""
+"We currently do not have carers published as matching your needs in this "
+"area."
+msgstr ""
+"En este momento no tenemos cuidadores/as publicados que coincidan con tus "
+"necesidades en este area.\t "
+
+msgid ""
+"New caregivers as they join us every day, call us or email us and we will "
+"help you in your quest for free (answer in less than 24 hours)."
+msgstr ""
+"Nuevos cuidadores/as se unen a nosotros cada día, llamanos o envianos un "
+"email y te ayudamos gratuitamente en tu búsqueda(respuesta en menos de "
+"24horas)."
