@@ -39,7 +39,7 @@ Si, lo es. Es compatible con WPML.
 
 == Screenshots ==
 
-screenshot-1.png
+1. Captura de pantalla de Afables Widget. Opciones del Widget.
 
 == Changelog ==
 
