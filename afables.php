@@ -1,6 +1,7 @@
 <?php 
 /*
  Plugin Name: Afables
+ Plugin URI: http://wordpress.org/plugins/afables/
  Description: Widget para wordpress de Afables
  Author: OhayoWeb
  Author URI: http://www.ohayoweb.com/

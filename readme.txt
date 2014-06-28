@@ -7,22 +7,39 @@ License: GPLv2 or later
 
 == Description ==
 
-This plugin uses the <a href="http://www.afables.com/">Afables</a> feed data to display selected 
-data. Get your city home helpers. Easy to installs and support multi-widget.
+Este plugin usa el feed de [**Afables**](http://www.afables.com/) para mostrar la información seleccionada. Busca cuidadores en tu ciudad. Fácil de installar y soporte multi-widget. Castellano y catalán disponible.
 
-<h3><strong>Question & Supports</strong></h3>
-This plugin does not match to your site style? Is this script not quite working as it should? 
-Having trouble installing? Or need some custom modifications that aren’t already included? 
-Or you want more features on next release? Please leave messages or comments here:<br />
-wp@ohayoweb.com
+
+#Características#
+* Puedes filtar por cuidadores y/o empresas.
+* Filtra los resultados unicamente para tu ciudad.
+* Filtra por los diferentes canales disponibles.
+* Posibilidad de ocultar las imagenes.
+* Permite más de una instancia para el widget.
+* Idiomas disponibles: Castellano y catalán.
+
 
 == Installation ==
 
-1. Upload plugin files to your plugins folder, or install using WordPress' built-in Add New Plugin installer
-2. Activate the plugin
-3. Go to the widgets page (under Appearence > Widgets )
-4. Add a Afables Widget to a Widget Area and Configure the display settings.
-5. Click Save Changes.
+1. Subir el plugin a la carpeta plugins, o instalarlo usando la opción de Añadir nuevo plugin de Wordpress.
+1. Activar el plugin
+1. Ir a la página de widgets (En Apariencia > Widgets )
+1. Añadir el Afables Widget a tu área Widget deseada y configurar las opciones.
+1. Guardar cambios.
+
+== Frequently asked questions ==
+
+= ¿Cómo se configura el idioma? =
+
+Por defecto el plugin mostrar los datos en el idioma que tengas configurado Wordpress. 
+
+= ¿Es compatible con WPML? =
+
+Si, lo es. Es compatible con WPML.
+
+== Screenshots ==
+
+screenshot-1.png
 
 == Changelog ==
 
