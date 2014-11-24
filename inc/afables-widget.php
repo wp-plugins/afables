@@ -285,7 +285,8 @@ class Afables_Widget extends WP_Widget {
 	public function load_feed($url){
 
 		//include_once plugin_dir_path( __FILE__ ).'../rss-robot/inc/load_SimplePie.php';
-		include_once plugin_dir_path( __FILE__ ).'load_SimplePie.php';
+		//include_once plugin_dir_path( __FILE__ ).'load_SimplePie.php';
+		require_once (ABSPATH . WPINC . '/class-simplepie.php');
 		
 		$channel_feed = new SimplePie();
 		
