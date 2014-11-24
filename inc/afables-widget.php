@@ -5,6 +5,8 @@ add_action( 'widgets_init', create_function( '', 'register_widget( "afables_widg
 
 class Afables_Widget extends WP_Widget {
 
+	static $instances=array();
+	
 	public function __construct() {
 		
 		/** Cargamos el idioma **/
@@ -19,6 +21,13 @@ class Afables_Widget extends WP_Widget {
 		);
 	}
 
+	public function add_options_to_script(){
+		//If there is data to add, add it
+		//wp_localize_script( 'my_script', 'my_var', self::$variables);
+		wp_localize_script('afables-widget', 'afablesObject', self::$instances );
+		
+	}
+	
 	public function widget( $args, $instance ) {
 
 		//wp_enqueue_script('afables-jquery-ui','//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js', array('jquery'),'',true);
@@ -27,9 +36,21 @@ class Afables_Widget extends WP_Widget {
 		wp_enqueue_style( 'font-awesome', plugins_url( '../css/font-awesome.css' , __FILE__ ));
 		endif;
 		
-		wp_enqueue_script('jquery');
+		//wp_enqueue_script('jquery');
 		
-		//wp_enqueue_script( 'afables-widget', plugins_url( '../js/afables-widget.js' , __FILE__ ), array('jquery'), AFABLES_PLUGIN_VERSION ,true );
+		wp_register_script( 'afables-widget', plugins_url( '../js/afables-widget.js' , __FILE__ ), array('jquery'), AFABLES_PLUGIN_VERSION ,true );
+		//$translation_array = array();
+		//$idInstance = array ('widgetId' => $this->id);
+		//$translation_array[] = $idInstance;
+		//wp_localize_script('afables-widget', 'afablesObject', $translation_array );
+		
+		add_action('wp_footer', array(__CLASS__, 'add_options_to_script'));
+		
+		wp_enqueue_script('afables-widget');
+		
+		$id = $this->id;
+		self::$instances[$id] = '#'. $this->id;
+		
 		
 		$before_texto = '<div class="afables-wrapper-widget">';
 		$after_texto = '</div>';
@@ -106,7 +127,7 @@ class Afables_Widget extends WP_Widget {
 		</div><!-- .afables-wrapper-widget -->
 		
 		
-		<?php include(plugin_dir_path( __FILE__ ).'../js/afables-widget-js.php'); ?>
+		<?php //include(plugin_dir_path( __FILE__ ).'../js/afables-widget-js.php'); ?>
 		
 		
 		<?php 
@@ -201,7 +222,7 @@ class Afables_Widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'channel' ); ?>"><?php _e( 'Channel:','afables' ); ?></label> 
 			<select class="widefat" id="<?php echo $this->get_field_id( 'channel' ); ?>" name="<?php echo $this->get_field_name( 'channel' ); ?>">
 				<?php $channels = $this->load_feed(AFABLES_RSS_CHANNEL);?>
-				<option value="none" <?php echo ($channel == 'none') ? $selected : null ?>><?php _e('All', 'afables');?></option>
+				<option value="none" <?php echo (!$channels) ? $selected : null ?>><?php _e('All', 'afables');?></option>
 				
 				<?php foreach ($channels as $key => $item): ?> 
 				<option value="<?php echo $item->get_id();?>" <?php echo ($channel == $item->get_id()) ? $selected : null ?>><?php echo $item->get_title();?></option>
@@ -263,8 +284,8 @@ class Afables_Widget extends WP_Widget {
 
 	public function load_feed($url){
 
-		//include_once plugin_dir_path( __FILE__ ).'load_SimplePie.php';
-		require ABSPATH . WPINC . '/class-simplepie.php';
+		//include_once plugin_dir_path( __FILE__ ).'../rss-robot/inc/load_SimplePie.php';
+		include_once plugin_dir_path( __FILE__ ).'load_SimplePie.php';
 		
 		$channel_feed = new SimplePie();
 		

@@ -2,8 +2,9 @@
 Contributors: ohayo-web
 Tags: afables, feed, widget, sidebar, city, channel
 Requires at least: 3.7.1
-Tested up to: 3.7.1
+Tested up to: 3.9.1
 License: GPLv2 or later
+Stable tag: 1.3
 
 == Description ==
 
@@ -42,6 +43,11 @@ Si, lo es. Es compatible con WPML.
 1. Captura de pantalla de Afables Widget. Opciones del Widget.
 
 == Changelog ==
+
+= 1.3 =
+* Fixed an error loading multiple instances of the widget on the same page.
+* Removed an additional slash in the rss address.
+* Fixed an error when jQuery is loaded in the footer.
 
 = 0.1 =
 * Released

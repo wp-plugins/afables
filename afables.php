@@ -1,15 +1,14 @@
 <?php 
 /*
  Plugin Name: Afables
- Plugin URI: http://wordpress.org/plugins/afables/
  Description: Widget para wordpress de Afables
  Author: OhayoWeb
  Author URI: http://www.ohayoweb.com/
- Version: 0.1
+ Version: 1.3
 */
 
 
-define('AFABLES_PLUGIN_VERSION','0.1');
+define('AFABLES_PLUGIN_VERSION','1.3');
 define('AFABLES_USERAGENT','Afables Wordpress Plugin '.AFABLES_PLUGIN_VERSION);
 
 /** campaña analytics **/
@@ -25,8 +24,8 @@ $AFABLES_SUPPORTED_LANGUAGES = array('es','ca');
 define('AFABLES_RSS',			'http://www.afables.com/rss/rss');
 define('AFABLES_RSS_CHANNEL',	'http://www.afables.com/rss/rsschannel');
 
-define('AFABLES_CACHE_FOLDER',plugin_dir_path( __FILE__ ).'/cache');
-define('AFABLES_CACHE_DURATION','21600'); # 6 horas // 21600
+define('AFABLES_CACHE_FOLDER',plugin_dir_path( __FILE__ ).'cache');
+define('AFABLES_CACHE_DURATION',21600); # 6 horas // 21600
 
 /** Load languages **/
 function afables_load_language() {
