@@ -92,9 +92,9 @@ class Afables_Widget extends WP_Widget {
 			<?php if($total > 0 ): # Si hay resultados ?>
 			
 				<?php if($instance['type']== 'all'):?>
-				<div id="filter-type">
-					<label><input type="radio" name="type" value="INDIVIDUAL"> <?php _e('Caregivers','afables');?></label>
-					<label><input type="radio" name="type" value="COMPANY"> <?php _e('Home help companies','afables')?></label>
+				<div id="filter-type" class="filterby">
+					<label><input type="radio" name="type_<?php echo $this->id;?>" value="INDIVIDUAL"> <?php _e('Caregivers','afables');?></label>
+					<label><input type="radio" name="type_<?php echo $this->id;?>" value="COMPANY"> <?php _e('Home help companies','afables')?></label>
 				</div>
 				<?php endif;?>
 			
@@ -295,7 +295,7 @@ class Afables_Widget extends WP_Widget {
 		$channel_feed->set_useragent(AFABLES_USERAGENT);
 		$channel_feed->set_feed_url($url);
 		
-		if(WP_DEBUG == true) $channel_feed->enable_cache = false; // Desactivamos la cache en debug
+		#if(WP_DEBUG == true) $channel_feed->enable_cache = false; // Desactivamos la cache en debug
 		
 		$channel_feed->init();
 		
@@ -320,7 +320,7 @@ class Afables_Widget extends WP_Widget {
 			echo '<li class="'.$content->type.'">';
 			echo '<h5>'.$titulo.'</h5>';
 			
-			if(!$hide_thumbnail) echo '<div class="thumbnail"><img src="'.$image[0]['data'].'"></div>';
+			if(!$hide_thumbnail) echo '<div class="thumbnail"><img src="" data-src="'.$image[0]['data'].'"></div>';
 			
 			echo '<div class="rate">';
 			$this->display_ratting($content->rate); 

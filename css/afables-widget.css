@@ -1,13 +1,14 @@
 .afables-wrapper-widget{  width: 100%; padding: 0 2%; text-align: center;}
 .afables-wrapper-widget hr{ border-bottom: 1px solid #fff;}
 .afable-title{ text-align: center; }
+.afables-wrapper-widget ul.afables-result{ list-style: none;}
 .afables-wrapper-widget li {display: none; text-align: center;}
 .afables-wrapper-widget li:first-child{display: block;}
 
 .afables-wrapper-widget .rate{ color: #C09853; font-size: 22px;}
 .afables-wrapper-widget h5{ margin-top: 0px; }
 .afables-wrapper-widget span.price{ font-weight: bold; font-size: 14px; }
-.afables-wrapper-widget #filter-type { margin: 10px 0;}
+.afables-wrapper-widget .filter-type { margin: 10px 0;}
 .afables-wrapper-widget .thumbnail  {
 
 	position: relative;

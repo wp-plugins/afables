@@ -4,10 +4,34 @@ jQuery(document).ready(function($){
 	
 	var list = [];
 	var filter = '';
+	var newfilter = [];
 	
 	$.each(afablesObject, function( index, value ) {
 		list[index] =  $(value+' ul.afables-result');
-		list[index].children(value +' .afables-result li'+filter).eq('0').siblings().hide(); // Hide all except first list element
+		list[index].children(value +' .afables-result li'+newfilter[index]).eq('0').siblings().hide(); // Hide all except first list element
+		//console.log(list[index]);
+
+		newfilter[index] = '';
+		
+		source = $(value+' .afables-result li'+newfilter[index]).eq(active).find('.thumbnail > img').data('src');
+		$(value+' .afables-result li'+newfilter[index]).eq(active).find('.thumbnail > img').attr('src',source);
+		
+		$(value+' .filterby input[name=type_'+index+']').bind('click', function(){
+			//console.log($(this).val());
+			filter='.'+$(this).val();
+			//console.log(filter);
+			newfilter[index]='.'+$(this).val();
+
+			//console.log(index);
+		});
+		
+	});
+	
+	
+	
+	$.each(afablesObject, function( index, value ) {
+		list[index] =  $(value+' ul.afables-result');
+		list[index].children(value +' .afables-result li'+newfilter[index]).eq('0').siblings().hide(); // Hide all except first list element
 	});
 	
 	$.each(list, function( index, value ) {
@@ -17,25 +41,30 @@ jQuery(document).ready(function($){
 
 	$.each(afablesObject, function( index, value ) {
 		
-		$(value+' .afables-wrapper-widget input[name=type]').bind('click', function(){
-			filter[index] = $(value+' .afables-wrapper-widget input[name=type]:checked').val();
-			list[index].children(value+' .afables-result li'+filter[index]).eq('0').siblings().hide();
+		
+		$(value+' .afables-wrapper-widget input[name=type_'+index+']').bind('click', function(){
+			filter[index] = $(value+' .afables-wrapper-widget input[name=type_'+index+']:checked').val();
+			list[index].children(value+' .afables-result li'+newfilter[index]).eq('0').siblings().hide();
 			active = 0;
 		});
 		
 		$(value+' .afables-next').bind('click', function(event) {
 			event.preventDefault();
-			active = active == list[index].children(value+' .afables-result li'+filter[index]).length-1 ? 0 : active + 1;
+			active = active == list[index].children(value+' .afables-result li'+newfilter[index]).length-1 ? 0 : active + 1;
+			source = $(value+' .afables-result li'+newfilter[index]).eq(active).find('.thumbnail > img').data('src');
+			$(value+' .afables-result li'+newfilter[index]).eq(active).find('.thumbnail > img').attr('src',source);
 		});
 
 		$(value+' .afables-previous').bind('click', function(event) {
 			event.preventDefault();
 			active = active == 0 ? list[index].children(value+' .afables-result li'+filter[index]).length-1 : active - 1;
+			source = $(value+' .afables-result li'+newfilter[index]).eq(active).find('.thumbnail > img').data('src');
+			$(value+' .afables-result li'+newfilter[index]).eq(active).find('.thumbnail > img').attr('src',source);
 		});
 		
 
 		
-		$(value+' .afables-previous,'+ value +' .afables-next,'+ value +' .afables-wrapper-widget input[name=type]').bind('click', function() {
+		$(value+' .afables-previous,'+ value +' .afables-next,'+ value +' .afables-wrapper-widget input[name=type_'+index+']').bind('click', function() {
 			getActive(index,value).show().siblings().hide();
 		});
 		
@@ -56,7 +85,10 @@ jQuery(document).ready(function($){
 	
 	
 	var getActive = function(index,value) {
-		return list[index].children(value+' .afables-result li'+filter).eq(active);
+		source = $(value+' .afables-result li'+newfilter[index]).eq(active).find('.thumbnail > img').data('src');
+		$(value+' .afables-result li'+newfilter[index]).eq(active).find('.thumbnail > img').attr('src',source);
+		//console.log(source);
+		return list[index].children(value+' .afables-result li'+newfilter[index]).eq(active);
 	};
 	
 	

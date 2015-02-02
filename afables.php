@@ -4,11 +4,11 @@
  Description: Widget para wordpress de Afables
  Author: OhayoWeb
  Author URI: http://www.ohayoweb.com/
- Version: 1.3.1
+ Version: 1.3.2
 */
 
 
-define('AFABLES_PLUGIN_VERSION','1.3.1');
+define('AFABLES_PLUGIN_VERSION','1.3.2');
 define('AFABLES_USERAGENT','Afables Wordpress Plugin '.AFABLES_PLUGIN_VERSION);
 
 /** campaña analytics **/
